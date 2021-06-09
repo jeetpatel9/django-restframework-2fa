@@ -15,7 +15,7 @@ def get_doc():
 
 setup(
     name="django_restframework_2fa",
-    version="0.0.6",
+    version="0.0.8",
     description="Some description",
     long_description=get_doc(),
     long_description_content_type="text/markdown",
