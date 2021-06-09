@@ -15,7 +15,7 @@ def get_doc():
 
 setup(
     name="django_restframework_2fa",
-    version="0.0.2",
+    version="0.0.6",
     description="Some description",
     long_description=get_doc(),
     long_description_content_type="text/markdown",
@@ -44,9 +44,8 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
     ],
     install_requires=[
-        "djangorestframework",
-        "django",
-        "pyjwt",
+        "djangorestframework==3.12.4",
+        "django==3.2.4",
         "twilio==6.55.0",
         "djangorestframework-simplejwt==4.6.0",
     ],
