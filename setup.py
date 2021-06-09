@@ -20,7 +20,7 @@ setup(
     long_description=get_doc(),
     long_description_content_type="text/markdown",
     url="https://github.com/jeetpatel9/django-restframework-2fa.git",
-    py_modules=['helloworld'],
+    py_modules=['models', 'serializers', 'services', 'urls', 'app', 'tests'],
     package_dir={'': 'django_restframework_2fa'},
     author='Jeet Patel',
     author_email='jpatel99967@gmail.com',
@@ -46,13 +46,9 @@ setup(
     install_requires=[
         "djangorestframework",
         "django",
-        "djangorestframework-simplejwt",
         "pyjwt",
         "twilio==6.55.0",
         "djangorestframework-simplejwt==4.6.0",
-        "django-phonenumber-field==5.2.0",
-        "phonenumbers==8.12.24",
-
     ],
     extra_requires={
         "dev": [

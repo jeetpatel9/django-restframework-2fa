@@ -21,7 +21,6 @@ if __name__ == "__main__":
             'django.contrib.sessions',
             'django.contrib.messages',
             'django.contrib.staticfiles',
-            'phonenumber_field',
             'rest_framework',
             'django_restframework_2fa'
         ],
@@ -63,16 +62,12 @@ if __name__ == "__main__":
         # set auth model for the application.
         AUTH_USER_MODEL = 'django_restframework_2fa.User',
 
-        # Phone Number config.
-        PHONENUMBER_DB_FORMAT = 'INTERNATIONAL',
-        PHONENUMBER_DEFAULT_REGION = 'IN',
-
         SIMPLE_JWT = {
             'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=30),
             'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=1),
         },
 
-        TWILIO_SID = os.environ.get('TWILIO_SID')
+        TWILIO_SID = os.environ.get('TWILIO_SID'),
         TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN'),
         TWILIO_SERVICE_ID = os.environ.get('TWILIO_SERVICE_ID'),
 
@@ -84,8 +79,6 @@ if __name__ == "__main__":
                 'PASSWORD': os.environ.get('PASSWORD'),
                 'HOST': os.environ.get('HOST'),
                 'PORT': os.environ.get('PORT'),
-                'ATOMIC_REQUESTS':os.environ.get('ATOMIC_REQUESTS'),
-                'CONN_MAX_AGE':os.environ.get('CONN_MAX_AGE'),
             }
         }
     )
