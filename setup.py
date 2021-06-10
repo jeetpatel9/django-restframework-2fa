@@ -15,19 +15,17 @@ def get_doc():
 
 setup(
     name="django_restframework_2fa",
-    version="0.0.12",
-    description="Some description",
+    version="0.0.15",
+    description="A simple two factor authentication plugin for DRF compatible to work with Twilio's SMS service..",
     long_description=get_doc(),
     long_description_content_type="text/markdown",
     url="https://github.com/jeetpatel9/django-restframework-2fa.git",
-    package=find_packages(exclude= ['models', 'tests']),
     author='Jeet Patel',
     author_email='jpatel99967@gmail.com',
     python_requires='>=3.7',
     include_package_data=True,
     zip_safe=False,
-    packages=find_packages(
-        exclude=['tests', 'models']),
+    packages=find_packages(),
     classifiers=[
         "Environment :: Web Environment",
         "Programming Language :: Python",

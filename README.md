@@ -1,10 +1,8 @@
 <h1> DRF Two Factor Authentication. </h1>
 
-A simple two factor authentication plugin, compatible with  <a href="https://pypi.org/project/djangorestframework-simplejwt/">Simple JWT<a> for <a href="https://www.django-rest-framework.org/">Django Rest Framework</a>.
-
+A simple two factor authentication plugin for <a href="https://www.django-rest-framework.org/">Django Rest Framework</a> built on top of <a href="https://pypi.org/project/djangorestframework-simplejwt/">Simple JWT</a> and compatible with Twilio's SMS service. 
 
 The motive of ***DRF Two Factor Authentication*** is to provide the pre defined basic authentication related APIs. It aims to cover the most common use case of ***Two Factor Authentication*** by providing the set of most generic APIs. This plugin will only work with Twilio's SMS service.
-
 
 ## Acknowledgments
 
@@ -36,4 +34,4 @@ pip install django-restframework-2fa
 ```
 
 
-Then, your django project must be configured to use the plugin <a href="https://pypi.org/project/djangorestframework-simplejwt/">Simple JWT<a>. It is highly recommended to appropriately configure this plugin as this package is highly dependent on it.
+It is required to have your Django project configured to use the plugin <a href="https://pypi.org/project/djangorestframework-simplejwt/">Simple JWT</a>. It is highly recommended to appropriately configure this plugin as this package is highly dependent on it.
