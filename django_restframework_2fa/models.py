@@ -3,7 +3,7 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 
-class User(AbstractBaseUser, PermissionsMixin):
+class TestUser(AbstractBaseUser, PermissionsMixin):
 
     '''
     This model will contain all user's authentication ßinformation
