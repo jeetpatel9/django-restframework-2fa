@@ -15,20 +15,19 @@ def get_doc():
 
 setup(
     name="django_restframework_2fa",
-    version="0.0.8",
+    version="0.0.12",
     description="Some description",
     long_description=get_doc(),
     long_description_content_type="text/markdown",
     url="https://github.com/jeetpatel9/django-restframework-2fa.git",
-    py_modules=['models', 'serializers', 'services', 'urls', 'app', 'tests'],
-    package_dir={'': 'django_restframework_2fa'},
+    package=find_packages(exclude= ['models', 'tests']),
     author='Jeet Patel',
     author_email='jpatel99967@gmail.com',
     python_requires='>=3.7',
     include_package_data=True,
     zip_safe=False,
     packages=find_packages(
-        exclude=['tests', 'tests.*', 'licenses', 'requirements']),
+        exclude=['tests', 'models']),
     classifiers=[
         "Environment :: Web Environment",
         "Programming Language :: Python",
