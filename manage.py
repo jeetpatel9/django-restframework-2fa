@@ -60,7 +60,7 @@ if __name__ == "__main__":
         },
 
         # set auth model for the application.
-        AUTH_USER_MODEL = 'django_restframework_2fa.User',
+        AUTH_USER_MODEL = 'django_restframework_2fa.TestUser',
 
         SIMPLE_JWT = {
             'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=30),
@@ -71,14 +71,10 @@ if __name__ == "__main__":
         TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN'),
         TWILIO_SERVICE_ID = os.environ.get('TWILIO_SERVICE_ID'),
 
-        DATABASES = { 
+        DATABASES = {
             'default': {
-                'ENGINE': 'django.db.backends.mysql', 
-                'NAME': os.environ.get('DB_NAME'),
-                'USER': os.environ.get('USER'),
-                'PASSWORD': os.environ.get('PASSWORD'),
-                'HOST': os.environ.get('HOST'),
-                'PORT': os.environ.get('PORT'),
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': 'db.sqlite3',
             }
         }
     )
